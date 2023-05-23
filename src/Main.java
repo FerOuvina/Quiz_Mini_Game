@@ -10,7 +10,7 @@ public class Main {
 	Scanner scanner = new Scanner(System.in);
 
 	//	First question
-	System.out.println("First question");
+	System.out.println("\n" + "First question");
 	String question_1 = "How much is: " + x + "*" + y;
 	System.out.println(question_1);
 	int userInput = scanner.nextInt();
@@ -23,10 +23,9 @@ public class Main {
 	  new CheckPoints(points);
 	  System.out.println("The correct answer was: " + x * y);
 	}
-	System.out.println(" ");
 
 	//	Second question
-	System.out.println("Second question");
+	System.out.println("\n" + "Second question");
 	String question_2 = "How much is: " + z + "*" + y;
 	System.out.println(question_2);
 	userInput = scanner.nextInt();
@@ -39,32 +38,30 @@ public class Main {
 	  new CheckPoints(points);
 	  System.out.println("The correct answer was: " + z * y);
 	}
-	System.out.println(" ");
 
 	//	Third question
-	System.out.println("Third question");
+	System.out.println("\n" + "Third question");
 	String question_3 = "How much is: " + x + "/" + z;
 	System.out.println(question_3);
 	userInput = scanner.nextInt();
 
-	if (userInput == x / y) {
+	if (userInput == 0) {
 	  points++;
 	  System.out.println("Your answer was correct!" + " You have gained a point!");
 	  System.out.println("Your total points are: " + points);
 	} else {
 	  new CheckPoints(points);
-	  System.out.println("The correct answer was: " + x / z);
+	  System.out.println("The correct answer was: " + 0);
 	}
 
-	System.out.println(" ");
-	System.out.println("The game is over!");
+	System.out.println("\n" + "The game is over!");
 	if (points <= 0) {
 	  System.out.println("You Finished the game with: " + points + " points!");
 	  System.out.println("You need to practice a little more math and try again");
-	} else if (points >= 1 && points < 3) {
+	} else if (points < 3) {
 	  System.out.println("Congrats!");
 	  System.out.println("You Finished the game with: " + points + " points!");
-	} else if (points == 3) {
+	} else {
 	  System.out.println("Congrats!");
 	  System.out.println("You Finished the game with: " + points + " points!");
 	  System.out.println("You are a math god!");
